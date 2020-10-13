@@ -27,10 +27,10 @@
 # my original solution
 # class Solution:
 #     def reorderLogFiles(self, logs: List[str]) -> List[str]:
+#         digit_logs = []
 #         letter_logs = []
 #         letter_log_words = []
 #         letter_log_ids = []
-#         digit_logs = []
 #         s = ' '
 #         num_letter_logs = 0
 #         for i, log in enumerate(logs):
