@@ -27,4 +27,3 @@ class Solution:
                 if h >= fut_max:
                     fut_max = max(height[(i+2):])
         return trapped
-
