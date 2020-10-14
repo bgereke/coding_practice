@@ -12,8 +12,12 @@
 # You may assume k is always valid, 1 ≤ k ≤ array's length.
 
 # my first solution
-class Solution:
-    def findKthLargest(self, nums: List[int], k: int) -> int:
-        nums_sorted = sorted(nums, reverse=True)
-        return nums_sorted[k-1]
+# class Solution:
+#     def findKthLargest(self, nums: List[int], k: int) -> int:
+#         nums_sorted = sorted(nums, reverse=True)
+#         return nums_sorted[k-1]
 
+# fast solution
+class Solution:
+    def findKthLargest(self, nums, k):
+        return heapq.nlargest(k, nums)[-1]
