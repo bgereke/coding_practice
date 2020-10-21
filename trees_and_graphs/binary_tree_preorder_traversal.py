@@ -49,7 +49,7 @@ class Solution:
                 root = root.right
         return result
 
-# recursive solution
+# recursive version of solution
 class Solution:
     def preorderTraversal(self, root: TreeNode) -> List[int]:
         def traverse(node, stack = [], result = []):

@@ -53,7 +53,7 @@ class Solution:
                 else:
                     return result
 
-# recursive solution
+# recursive version of solution
 class Solution:
     def inorderTraversal(self, root: TreeNode) -> List[int]:
         def traverse(node, stack = [], result = []):
