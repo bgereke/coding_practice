@@ -65,3 +65,9 @@ class Solution:
             else:
                 return result
         return traverse(root)
+
+# one line recursive solution
+class Solution:
+    def preorderTraversal(self, root: TreeNode) -> List[int]:
+        return [] if root is None else [root.val] + self.preorderTraversal(root.left) + self.preorderTraversal(root.right)
+            
