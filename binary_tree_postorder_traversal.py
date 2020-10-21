@@ -35,7 +35,31 @@
 # iterative solution
 
 
-# recursive solution
+# iterative solution
+class Solution:
+    def postorderTraversal(self, root: TreeNode) -> List[int]:
+        result = []
+        if not root:
+            return result
+        stack = [{'node': root, 'left': False, 'right': False}]
+        while True:
+            if stack[-1]['left'] is False and root.left is not None:  
+                stack[-1]['left'] = True
+                root = root.left
+                stack.append({'node': root, 'left': False, 'right': False})
+            elif stack[-1]['right'] is False and root.right is not None:
+                stack[-1]['right'] = True
+                root = root.right  
+                stack.append({'node': root, 'left': False, 'right': False})
+            elif stack:
+                result.append(root.val) 
+                stack.pop()
+                if not stack:
+                    return result
+                else:
+                    root = stack[-1]['node']
+
+# one line recursive solution
 class Solution:
     def postorderTraversal(self, root: TreeNode) -> List[int]:
         if not root:
